@@ -43,7 +43,7 @@
       <div class="row" id="subscribe">
 
         <div id="mc_embed_signup">
-            <form action="http://mightyhq.us5.list-manage.com/subscribe/post?u=33de381490474f2e2ba8316b6&amp;id=392222c5ab" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+            <form action="http://mightyhq.us5.list-manage.com/subscribe/post?u=33de381490474f2e2ba8316b6&amp;id=392222c5ab" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" onsubmit="return signupCount()" target="_blank">
             <input type="email" value="" name="EMAIL" class="span4 input-large email" id="mce-EMAIL" placeholder="email address" required>
             <input type="submit" value="Signup" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-large">
         </form>
@@ -86,6 +86,10 @@
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-33587712-2']);
         _gaq.push(['_trackPageview']);
+
+        function signupCount() {
+          _gaq.push(['_trackPageview', '/signup']);
+        }
 
         (function() {
           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
